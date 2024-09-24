@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Daisy UI -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-8">
+    <header>
+      <div class="navbar bg-slate-200 my-8 rounded-xl max-w-screen-lg mx-auto p-4">
+        <div class="flex-1">
+          <div>
+            <h2 class="font-bold text-gray-600 text-base">
+              <span class="text-2xl font-bold">Interactive </span> <br />
+              Geometry Genius
+            </h2>
+          </div>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <button class="btn">Blog</button>
+          </div>
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="max-w-screen-lg mx-auto">
+        <!-- Card section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Triangle -->
+
+          <div class="card bg-red-300 shadow-xl">
+            <figure class="w-10/12 mx-auto pt-4">
+              <img src="./images/triangle.png" alt="Triangle" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="text-xl font-semibold text-center">Triangle</h2>
+              <p>Area (A) = 0.5 x B x H</p>
+              <div class="gap-1">
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="b-inp-Triangle"
+                  placeholder="b"
+                />
+                <span>cm</span>
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="h-inp-Triangle"
+                  placeholder="h"
+                />
+                <span>cm</span>
+              </div>
+              <!-- Result -->
+              <h3 class="text-lg font-semibold my-4">
+                Result = <span id="value-Triangle">....</span>
+              </h3>
+              <div class="card-actions mt-5">
+                <button id="btn-Triangle" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rectangle -->
+
+          <div class="card bg-orange-300 shadow-xl">
+            <figure class="w-10/12 h-3/4 mx-auto pt-4">
+              <img src="./images/rectangle.png" alt="Triangle" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="text-xl font-semibold text-center">Rectangle</h2>
+              <p>Area (A) = W x I</p>
+              <div class="gap-1">
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="w-inp-Rectangle"
+                  placeholder="W"
+                />
+                <span>cm</span>
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="i-inp-Rectangle"
+                  placeholder="I"
+                />
+                <span>cm</span>
+              </div>
+              <!-- Result -->
+              <h3 class="text-lg font-semibold my-4">
+                Result = <span id="value-Rectangle">....</span>
+              </h3>
+              <div class="card-actions mt-5">
+                <button id="btn-Rectangle" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Parallelogram -->
+
+          <div class="card bg-rose-400 shadow-xl">
+            <figure class="w-11/12 h-3/4 mx-auto pt-4">
+              <img src="./images/parallelogram.png" alt="Triangle" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="text-xl font-semibold text-center">Parallelogram</h2>
+              <p>Area (A) = b x h</p>
+              <div class="gap-1">
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="b-inp-Parallelogram"
+                  placeholder="b"
+                />
+                <span>cm</span>
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="h-inp-Parallelogram"
+                  placeholder="h"
+                />
+                <span>cm</span>
+              </div>
+              <!-- Result -->
+              <h3 class="text-lg font-semibold my-4">
+                Result = <span id="value-Parallelogram">....</span>
+              </h3>
+              <div class="card-actions mt-5">
+                <button id="btn-Parallelogram" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rhombus -->
+
+          <div class="card bg-teal-300 shadow-xl">
+            <figure class="w-10/12 h-2/3 mx-auto pt-2">
+              <img src="./images/rhombus.png" alt="Triangle" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="text-xl font-semibold text-center">Rhombus</h2>
+              <p>Area (A) = 0.5 x d1 x d2</p>
+              <div class="gap-1">
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="d1-inp-Rhombus"
+                  placeholder="d1"
+                />
+                <span>cm</span>
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="d2-inp-Rhombus"
+                  placeholder="d2"
+                />
+                <span>cm</span>
+              </div>
+              <!-- Result -->
+              <h3 class="text-lg font-semibold my-4">
+                Result = <span id="value-Rhombus">....</span>
+              </h3>
+              <div class="card-actions mt-5">
+                <button id="btn-Rhombus" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Pentagon -->
+
+          <div class="card bg-violet-300 shadow-xl">
+            <figure class="w-10/12 h-3/4 mx-auto">
+              <img src="./images/pentagon.png" alt="Triangle" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="text-xl font-semibold text-center">Pentagon</h2>
+              <p>Area (A) = 0.5 x p x b</p>
+              <div class="gap-1">
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="p-inp-Pentagon"
+                  placeholder="p"
+                />
+                <span>cm</span>
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="b-inp-Pentagon"
+                  placeholder="b"
+                />
+                <span>cm</span>
+              </div>
+              <!-- Result -->
+              <h3 class="text-lg font-semibold my-4">
+                Result = <span id="value-Pentagon">....</span>
+              </h3>
+              <div class="card-actions mt-5">
+                <button id="btn-Pentagon" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Ellipse -->
+          <div class="card bg-amber-300 shadow-xl">
+            <figure class="w-10/12 pt-4 mx-auto">
+              <img src="./images/ellipse.png" alt="Triangle" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="text-xl font-semibold text-center">Ellipse</h2>
+              <p>Area (A) = πab</p>
+              <div class="gap-1">
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="a-inp-Ellipse"
+                  placeholder="a"
+                />
+                <span>cm</span>
+                <input
+                  class="w-20 bg-slate-100 text-2xl p-2 rounded-sm"
+                  type="text"
+                  name=""
+                  id="b-inp-Ellipse"
+                  placeholder="b"
+                />
+                <span>cm</span>
+              </div>
+              <!-- Result -->
+              <h3 class="text-lg font-semibold my-4">
+                Result = <span id="value-Ellipse">....</span>
+              </h3>
+              <div class="card-actions mt-5">
+                <button id="btn-Ellipse" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/triangle.js"></script>
+  </body>
+</html>
